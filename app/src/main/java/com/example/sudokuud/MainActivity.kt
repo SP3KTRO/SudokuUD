@@ -1,6 +1,7 @@
 package com.example.sudokuud
 
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.Toast
 import androidx.activity.ComponentActivity
@@ -90,8 +91,9 @@ class MainActivity : ComponentActivity() {
                 pista.setOnClickListener {
                     trys ++
                     val abc = 4 -trys
-                    if (trys <= 3){
+                    if (trys <= 4){
                         pista.text = "x$abc"
+
                         when(buSelected){
                             //bloque 1
                             botones[0] -> {botones[0].text = "$d"}; botones[1] -> { botones[1].text = "$f" }; botones[2] -> { botones[2].text = "$k" }; botones[3] -> { botones[3].text = "$e" }
@@ -137,15 +139,285 @@ class MainActivity : ComponentActivity() {
             }
         }
 
-        /*fun check (){
-            val ac = 1 - a
-            if (a<=2){
-                fin.setOnClickListener {
-                    a++
-                    if()
+        fun check() {
+            fin.setOnClickListener {
+                //bloque 1
+                if (botones[0].text != "$d") {
+                    botones[0].setBackgroundResource(R.drawable.borde_rojo)
+                }
+                if (botones[1].text != "$f") {
+                    botones[1].setBackgroundResource(R.drawable.borde_rojo)
+                }
+                if (botones[2].text != "$k") {
+                    botones[2].setBackgroundResource(R.drawable.borde_rojo)
+                }
+                if (botones[3].text != "$e") {
+                    botones[3].setBackgroundResource(R.drawable.borde_rojo)
+                }
+                if (botones[4].text != "$n") {
+                    botones[4].setBackgroundResource(R.drawable.borde_rojo)
+                }
+                if (botones[5].text != "$l") {
+                    botones[5].setBackgroundResource(R.drawable.borde_rojo)
+                }
+                if (botones[6].text != "$m") {
+                    botones[6].setBackgroundResource(R.drawable.borde_rojo)
+                }
+                if (botones[7].text != "$i") {
+                    botones[7].setBackgroundResource(R.drawable.borde_rojo)
+                }
+                if (botones[8].text != "$j") {
+                    botones[8].setBackgroundResource(R.drawable.borde_rojo)
+                }
+                //bloque 2
+                if (botones[9].text != "$i") {
+                    botones[9].setBackgroundResource(R.drawable.borde_rojo)
+                }
+                if (botones[10].text != "$l") {
+                    botones[10].setBackgroundResource(R.drawable.borde_rojo)
+                }
+                if (botones[11].text != "$m") {
+                    botones[11].setBackgroundResource(R.drawable.borde_rojo)
+                }
+                if (botones[12].text != "$d") {
+                    botones[12].setBackgroundResource(R.drawable.borde_rojo)
+                }
+                if (botones[13].text != "$k") {
+                    botones[13].setBackgroundResource(R.drawable.borde_rojo)
+                }
+                if (botones[14].text != "$j") {
+                    botones[14].setBackgroundResource(R.drawable.borde_rojo)
+                }
+                if (botones[15].text != "$f") {
+                    botones[15].setBackgroundResource(R.drawable.borde_rojo)
+                }
+                if (botones[16].text != "$n") {
+                    botones[16].setBackgroundResource(R.drawable.borde_rojo)
+                }
+                if (botones[17].text != "$e") {
+                    botones[17].setBackgroundResource(R.drawable.borde_rojo)
+                }
+                //bloque 3
+                if (botones[18].text != "$j") {
+                    botones[18].setBackgroundResource(R.drawable.borde_rojo)
+                }
+                if (botones[19].text != "$e") {
+                    botones[19].setBackgroundResource(R.drawable.borde_rojo)
+                }
+                if (botones[20].text != "$n") {
+                    botones[20].setBackgroundResource(R.drawable.borde_rojo)
+                }
+                if (botones[21].text != "$i") {
+                    botones[21].setBackgroundResource(R.drawable.borde_rojo)
+                }
+                if (botones[22].text != "$m") {
+                    botones[22].setBackgroundResource(R.drawable.borde_rojo)
+                }
+                if (botones[23].text != "$f") {
+                    botones[23].setBackgroundResource(R.drawable.borde_rojo)
+                }
+                if (botones[24].text != "$k") {
+                    botones[24].setBackgroundResource(R.drawable.borde_rojo)
+                }
+                if (botones[25].text != "$d") {
+                    botones[25].setBackgroundResource(R.drawable.borde_rojo)
+                }
+                if (botones[26].text != "$l") {
+                    botones[26].setBackgroundResource(R.drawable.borde_rojo)
+                }
+                //bloque 4
+                if (botones[27].text != "$k") {
+                    botones[27].setBackgroundResource(R.drawable.borde_rojo)
+                }
+                if (botones[28].text != "$m") {
+                    botones[28].setBackgroundResource(R.drawable.borde_rojo)
+                }
+                if (botones[29].text != "$f") {
+                    botones[29].setBackgroundResource(R.drawable.borde_rojo)
+                }
+                if (botones[30].text != "$i") {
+                    botones[30].setBackgroundResource(R.drawable.borde_rojo)
+                }
+                if (botones[31].text != "$j") {
+                    botones[31].setBackgroundResource(R.drawable.borde_rojo)
+                }
+                if (botones[32].text != "$n") {
+                    botones[32].setBackgroundResource(R.drawable.borde_rojo)
+                }
+                if (botones[33].text != "$l") {
+                    botones[33].setBackgroundResource(R.drawable.borde_rojo)
+                }
+                if (botones[34].text != "$e") {
+                    botones[34].setBackgroundResource(R.drawable.borde_rojo)
+                }
+                if (botones[35].text != "$d") {
+                    botones[35].setBackgroundResource(R.drawable.borde_rojo)
+                }
+                //bloque 5
+                if (botones[36].text != "$l") {
+                    botones[36].setBackgroundResource(R.drawable.borde_rojo)
+                }
+                if (botones[37].text != "$e") {
+                    botones[37].setBackgroundResource(R.drawable.borde_rojo)
+                }
+                if (botones[38].text != "$n") {
+                    botones[38].setBackgroundResource(R.drawable.borde_rojo)
+                }
+                if (botones[39].text != "$k") {
+                    botones[39].setBackgroundResource(R.drawable.borde_rojo)
+                }
+                if (botones[40].text != "$d") {
+                    botones[40].setBackgroundResource(R.drawable.borde_rojo)
+                }
+                if (botones[41].text != "$f") {
+                    botones[41].setBackgroundResource(R.drawable.borde_rojo)
+                }
+                if (botones[42].text != "$m") {
+                    botones[42].setBackgroundResource(R.drawable.borde_rojo)
+                }
+                if (botones[43].text != "$j") {
+                    botones[43].setBackgroundResource(R.drawable.borde_rojo)
+                }
+                if (botones[44].text != "$i") {
+                    botones[44].setBackgroundResource(R.drawable.borde_rojo)
+                }
+                //bloque 6
+                if (botones[45].text != "$d") {
+                    botones[45].setBackgroundResource(R.drawable.borde_rojo)
+                }
+                if (botones[46].text != "$i") {
+                    botones[46].setBackgroundResource(R.drawable.borde_rojo)
+                }
+                if (botones[47].text != "$j") {
+                    botones[47].setBackgroundResource(R.drawable.borde_rojo)
+                }
+                if (botones[48].text != "$e") {
+                    botones[48].setBackgroundResource(R.drawable.borde_rojo)
+                }
+                if (botones[49].text != "$l") {
+                    botones[49].setBackgroundResource(R.drawable.borde_rojo)
+                }
+                if (botones[50].text != "$m") {
+                    botones[50].setBackgroundResource(R.drawable.borde_rojo)
+                }
+                if (botones[51].text != "$f") {
+                    botones[51].setBackgroundResource(R.drawable.borde_rojo)
+                }
+                if (botones[52].text != "$n") {
+                    botones[52].setBackgroundResource(R.drawable.borde_rojo)
+                }
+                if (botones[53].text != "$k") {
+                    botones[53].setBackgroundResource(R.drawable.borde_rojo)
+                }
+                //bloque 7
+                if (botones[54].text != "$j") {
+                    botones[54].setBackgroundResource(R.drawable.borde_rojo)
+                }
+                if (botones[55].text != "$d") {
+                    botones[55].setBackgroundResource(R.drawable.borde_rojo)
+                }
+                if (botones[56].text != "$i") {
+                    botones[56].setBackgroundResource(R.drawable.borde_rojo)
+                }
+                if (botones[57].text != "$f") {
+                    botones[57].setBackgroundResource(R.drawable.borde_rojo)
+                }
+                if (botones[58].text != "$l") {
+                    botones[58].setBackgroundResource(R.drawable.borde_rojo)
+                }
+                if (botones[59].text != "$m") {
+                    botones[59].setBackgroundResource(R.drawable.borde_rojo)
+                }
+                if (botones[60].text != "$n") {
+                    botones[60].setBackgroundResource(R.drawable.borde_rojo)
+                }
+                if (botones[61].text != "$k") {
+                    botones[61].setBackgroundResource(R.drawable.borde_rojo)
+                }
+                if (botones[62].text != "$e") {
+                    botones[62].setBackgroundResource(R.drawable.borde_rojo)
+                }
+                //bloque 8
+                if (botones[63].text != "$n") {
+                    botones[63].setBackgroundResource(R.drawable.borde_rojo)
+                }
+                if (botones[64].text != "$f") {
+                    botones[64].setBackgroundResource(R.drawable.borde_rojo)
+                }
+                if (botones[65].text != "$l") {
+                    botones[65].setBackgroundResource(R.drawable.borde_rojo)
+                }
+                if (botones[66].text != "$e") {
+                    botones[66].setBackgroundResource(R.drawable.borde_rojo)
+                }
+                if (botones[67].text != "$i") {
+                    botones[67].setBackgroundResource(R.drawable.borde_rojo)
+                }
+                if (botones[68].text != "$k") {
+                    botones[68].setBackgroundResource(R.drawable.borde_rojo)
+                }
+                if (botones[69].text != "$j") {
+                    botones[69].setBackgroundResource(R.drawable.borde_rojo)
+                }
+                if (botones[70].text != "$m") {
+                    botones[70].setBackgroundResource(R.drawable.borde_rojo)
+                }
+                if (botones[71].text != "$d") {
+                    botones[71].setBackgroundResource(R.drawable.borde_rojo)
+                }
+                //bloque 9
+                if (botones[72].text != "$m") {
+                    botones[72].setBackgroundResource(R.drawable.borde_rojo)
+                }
+                if (botones[73].text != "$k") {
+                    botones[73].setBackgroundResource(R.drawable.borde_rojo)
+                }
+                if (botones[74].text != "$e") {
+                    botones[74].setBackgroundResource(R.drawable.borde_rojo)
+                }
+                if (botones[75].text != "$n") {
+                    botones[75].setBackgroundResource(R.drawable.borde_rojo)
+                }
+                if (botones[76].text != "$j") {
+                    botones[76].setBackgroundResource(R.drawable.borde_rojo)
+                }
+                if (botones[77].text != "$d") {
+                    botones[77].setBackgroundResource(R.drawable.borde_rojo)
+                }
+                if (botones[78].text != "$l") {
+                    botones[78].setBackgroundResource(R.drawable.borde_rojo)
+                }
+                if (botones[79].text != "$f") {
+                    botones[79].setBackgroundResource(R.drawable.borde_rojo)
+                }
+                if (botones[80].text != "$i") {
+                    botones[80].setBackgroundResource(R.drawable.borde_rojo)
+                }
+
+                if ((botones[0].text == "$d") && (botones[1].text == "$f") && (botones[2].text == "$k") && (botones[3].text == "$e") && (botones[4].text == "$n")
+                    && (botones[5].text == "$l") && (botones[6].text == "$m") && (botones[7].text == "$i") && (botones[8].text == "$j") && (botones[9].text == "$i")
+                    && (botones[10].text == "$l") && (botones[11].text == "$m") && (botones[12].text == "$d") && (botones[13].text == "$k") && (botones[14].text == "$j")
+                    && (botones[15].text == "$f") && (botones[16].text == "$n") && (botones[17].text == "$e") && (botones[18].text == "$j") && (botones[19].text == "$e")
+                    && (botones[20].text == "$n") && (botones[21].text == "$i") && (botones[22].text == "$m") && (botones[23].text == "$f") && (botones[24].text == "$k")
+                    && (botones[25].text == "$d") && (botones[26].text == "$l") && (botones[27].text == "$k") && (botones[28].text == "$m") && (botones[29].text == "$f")
+                    && (botones[30].text == "$i") && (botones[31].text == "$j") && (botones[32].text == "$n") && (botones[33].text == "$l") && (botones[34].text == "$e")
+                    && (botones[35].text == "$d") && (botones[36].text == "$l") && (botones[37].text == "$e") && (botones[38].text == "$n") && (botones[39].text == "$k")
+                    && (botones[40].text == "$d") && (botones[41].text == "$f") && (botones[42].text == "$m") && (botones[43].text == "$j") && (botones[44].text == "$i")
+                    && (botones[45].text == "$d") && (botones[46].text == "$i") && (botones[47].text == "$j") && (botones[48].text == "$e") && (botones[49].text == "$l")
+                    && (botones[50].text == "$m") && (botones[51].text == "$f") && (botones[52].text == "$n") && (botones[53].text == "$k") && (botones[54].text == "$j")
+                    && (botones[55].text == "$d") && (botones[56].text == "$i") && (botones[57].text == "$f") && (botones[58].text == "$l") && (botones[59].text == "$m")
+                    && (botones[60].text == "$n") && (botones[61].text == "$k") && (botones[62].text == "$e") && (botones[63].text == "$n") && (botones[64].text == "$f")
+                    && (botones[65].text == "$l") && (botones[66].text == "$e") && (botones[67].text == "$i") && (botones[68].text == "$k") && (botones[69].text == "$j")
+                    && (botones[70].text == "$m") && (botones[71].text == "$d") && (botones[72].text == "$m") && (botones[73].text == "$k") && (botones[74].text == "$e")
+                    && (botones[75].text == "$n") && (botones[76].text == "$j") && (botones[77].text == "$d") && (botones[78].text == "$l") && (botones[79].text == "$f")
+                    && (botones[80].text == "$i")
+                ) {
+                    Toast.makeText(this, "☺ Ganaste ☺", Toast.LENGTH_SHORT).show()
                 }
             }
-        }*/
+        }
+
+        check()
 
         if (d != e && d != f && f != e) {
             if (i != j && i != k && k != j && d != i && d != j && d != k && e != i && e != j && e != k && f != i && f != j && f != k) {
