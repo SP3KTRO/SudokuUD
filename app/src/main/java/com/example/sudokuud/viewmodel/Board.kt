@@ -22,11 +22,12 @@ class Board(private val activity: MainActivity) {
         val m = Random.nextInt(1..9)
         val n = Random.nextInt(1..9)
 
-        //botones del xml
+        //botones del tablero
         var botones = Array(81) { index ->
             val buttonId = activity.resources.getIdentifier("b${index + 1}", "id", activity.packageName)
             activity.findViewById<Button>(buttonId)
         }
+        //botones del teclado númerico
         val uno: Button = activity.findViewById(R.id.uno);val dos: Button = activity.findViewById(R.id.dos);val tres: Button = activity.findViewById(
             R.id.tres);val cuatro: Button = activity.findViewById(R.id.cuatro)
         val cinco: Button = activity.findViewById(R.id.cinco);val seis: Button = activity.findViewById(R.id.seis);val siete: Button = activity.findViewById(
