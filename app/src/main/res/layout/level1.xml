@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/back">
+    android:background="@drawable/fondo_level">
 
     <GridLayout
         android:id="@+id/top"
@@ -20,11 +20,12 @@
 
         <Button
             android:id="@+id/nuevo"
-            android:layout_width="137dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_row="1"
             android:layout_column="1"
-            android:text="Nuevo Juego"
+            android:background="@drawable/custom_button"
+            android:text="New Game ღ"
             tools:ignore="HardcodedText" />
 
     </GridLayout>
@@ -35,11 +36,13 @@
         android:layout_height="162dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
+
         android:columnCount="4"
         android:rowCount="4"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:ignore="MissingConstraints,UselessParent"
-        tools:layout_editor_absoluteX="19dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints,UselessParent">
 
         <Button
             android:id="@+id/uno"
@@ -48,7 +51,8 @@
             android:layout_row="0"
             android:layout_column="0"
             android:text="1"
-            tools:ignore="HardcodedText" />
+            tools:ignore="HardcodedText"
+            android:background="@drawable/custom_button"/>
 
         <Button
             android:id="@+id/dos"
@@ -57,7 +61,8 @@
             android:layout_row="0"
             android:layout_column="1"
             android:text="2"
-            tools:ignore="HardcodedText" />
+            tools:ignore="HardcodedText"
+            android:background="@drawable/custom_button"/>
 
         <Button
             android:id="@+id/tres"
@@ -66,7 +71,8 @@
             android:layout_row="0"
             android:layout_column="2"
             android:text="3"
-            tools:ignore="HardcodedText" />
+            tools:ignore="HardcodedText"
+            android:background="@drawable/custom_button"/>
 
         <Button
             android:id="@+id/pista"
@@ -75,7 +81,8 @@
             android:layout_row="0"
             android:layout_column="3"
             android:text="💡"
-            tools:ignore="HardcodedText" />
+            tools:ignore="HardcodedText"
+            android:background="@drawable/custom_button"/>
 
         <Button
             android:id="@+id/cuatro"
@@ -84,7 +91,8 @@
             android:layout_row="1"
             android:layout_column="0"
             android:text="4"
-            tools:ignore="HardcodedText" />
+            tools:ignore="HardcodedText"
+            android:background="@drawable/custom_button"/>
 
         <Button
             android:id="@+id/cinco"
@@ -93,7 +101,8 @@
             android:layout_row="1"
             android:layout_column="1"
             android:text="5"
-            tools:ignore="HardcodedText" />
+            tools:ignore="HardcodedText"
+            android:background="@drawable/custom_button"/>
 
         <Button
             android:id="@+id/seis"
@@ -102,7 +111,8 @@
             android:layout_row="1"
             android:layout_column="2"
             android:text="6"
-            tools:ignore="HardcodedText" />
+            tools:ignore="HardcodedText"
+            android:background="@drawable/custom_button"/>
 
         <Button
             android:id="@+id/borrar"
@@ -110,8 +120,9 @@
             android:layout_height="wrap_content"
             android:layout_row="1"
             android:layout_column="3"
-            android:text="Borrar"
-            tools:ignore="HardcodedText" />
+            android:text="Delete"
+            tools:ignore="HardcodedText"
+            android:background="@drawable/custom_button"/>
 
         <Button
             android:id="@+id/siete"
@@ -120,7 +131,8 @@
             android:layout_row="2"
             android:layout_column="0"
             android:text="7"
-            tools:ignore="HardcodedText" />
+            tools:ignore="HardcodedText"
+            android:background="@drawable/custom_button"/>
 
         <Button
             android:id="@+id/ocho"
@@ -129,7 +141,8 @@
             android:layout_row="2"
             android:layout_column="1"
             android:text="8"
-            tools:ignore="HardcodedText" />
+            tools:ignore="HardcodedText"
+            android:background="@drawable/custom_button"/>
 
         <Button
             android:id="@+id/nueve"
@@ -138,7 +151,8 @@
             android:layout_row="2"
             android:layout_column="2"
             android:text="9"
-            tools:ignore="HardcodedText" />
+            tools:ignore="HardcodedText"
+            android:background="@drawable/custom_button"/>
 
         <Button
             android:id="@+id/fin"
@@ -147,7 +161,8 @@
             android:layout_row="2"
             android:layout_column="3"
             android:text="✅"
-            tools:ignore="HardcodedText" />
+            tools:ignore="HardcodedText"
+            android:background="@drawable/custom_button"/>
 
     </GridLayout>
 
@@ -247,63 +262,63 @@
                 android:id="@+id/b10"
                 android:layout_width="43dp"
                 android:layout_height="45dp"
-                android:background="@drawable/borde_azul"
+                android:background="@drawable/borde_morado"
                 android:textColor="@color/black" />
 
             <Button
                 android:id="@+id/b11"
                 android:layout_width="43dp"
                 android:layout_height="45dp"
-                android:background="@drawable/borde_azul"
+                android:background="@drawable/borde_morado"
                 android:textColor="@color/black" />
 
             <Button
                 android:id="@+id/b12"
                 android:layout_width="43dp"
                 android:layout_height="45dp"
-                android:background="@drawable/borde_azul"
+                android:background="@drawable/borde_morado"
                 android:textColor="@color/black" />
 
             <Button
                 android:id="@+id/b13"
                 android:layout_width="43dp"
                 android:layout_height="45dp"
-                android:background="@drawable/borde_azul"
+                android:background="@drawable/borde_morado"
                 android:textColor="@color/black" />
 
             <Button
                 android:id="@+id/b14"
                 android:layout_width="43dp"
                 android:layout_height="45dp"
-                android:background="@drawable/borde_azul"
+                android:background="@drawable/borde_morado"
                 android:textColor="@color/black" />
 
             <Button
                 android:id="@+id/b15"
                 android:layout_width="43dp"
                 android:layout_height="45dp"
-                android:background="@drawable/borde_azul"
+                android:background="@drawable/borde_morado"
                 android:textColor="@color/black" />
 
             <Button
                 android:id="@+id/b16"
                 android:layout_width="43dp"
                 android:layout_height="45dp"
-                android:background="@drawable/borde_azul"
+                android:background="@drawable/borde_morado"
                 android:textColor="@color/black" />
 
             <Button
                 android:id="@+id/b17"
                 android:layout_width="43dp"
                 android:layout_height="45dp"
-                android:background="@drawable/borde_azul"
+                android:background="@drawable/borde_morado"
                 android:textColor="@color/black" />
 
             <Button
                 android:id="@+id/b18"
                 android:layout_width="43dp"
                 android:layout_height="45dp"
-                android:background="@drawable/borde_azul"
+                android:background="@drawable/borde_morado"
                 android:textColor="@color/black" />
 
         </GridLayout>
@@ -393,63 +408,63 @@
                 android:id="@+id/b28"
                 android:layout_width="43dp"
                 android:layout_height="45dp"
-                android:background="@drawable/borde_azul"
+                android:background="@drawable/borde_morado"
                 android:textColor="@color/black" />
 
             <Button
                 android:id="@+id/b29"
                 android:layout_width="43dp"
                 android:layout_height="45dp"
-                android:background="@drawable/borde_azul"
+                android:background="@drawable/borde_morado"
                 android:textColor="@color/black" />
 
             <Button
                 android:id="@+id/b30"
                 android:layout_width="43dp"
                 android:layout_height="45dp"
-                android:background="@drawable/borde_azul"
+                android:background="@drawable/borde_morado"
                 android:textColor="@color/black" />
 
             <Button
                 android:id="@+id/b31"
                 android:layout_width="43dp"
                 android:layout_height="45dp"
-                android:background="@drawable/borde_azul"
+                android:background="@drawable/borde_morado"
                 android:textColor="@color/black" />
 
             <Button
                 android:id="@+id/b32"
                 android:layout_width="43dp"
                 android:layout_height="45dp"
-                android:background="@drawable/borde_azul"
+                android:background="@drawable/borde_morado"
                 android:textColor="@color/black" />
 
             <Button
                 android:id="@+id/b33"
                 android:layout_width="43dp"
                 android:layout_height="45dp"
-                android:background="@drawable/borde_azul"
+                android:background="@drawable/borde_morado"
                 android:textColor="@color/black" />
 
             <Button
                 android:id="@+id/b34"
                 android:layout_width="43dp"
                 android:layout_height="45dp"
-                android:background="@drawable/borde_azul"
+                android:background="@drawable/borde_morado"
                 android:textColor="@color/black" />
 
             <Button
                 android:id="@+id/b35"
                 android:layout_width="43dp"
                 android:layout_height="45dp"
-                android:background="@drawable/borde_azul"
+                android:background="@drawable/borde_morado"
                 android:textColor="@color/black" />
 
             <Button
                 android:id="@+id/b36"
                 android:layout_width="43dp"
                 android:layout_height="45dp"
-                android:background="@drawable/borde_azul"
+                android:background="@drawable/borde_morado"
                 android:textColor="@color/black" />
 
         </GridLayout>
@@ -539,63 +554,63 @@
                 android:id="@+id/b46"
                 android:layout_width="43dp"
                 android:layout_height="45dp"
-                android:background="@drawable/borde_azul"
+                android:background="@drawable/borde_morado"
                 android:textColor="@color/black" />
 
             <Button
                 android:id="@+id/b47"
                 android:layout_width="43dp"
                 android:layout_height="45dp"
-                android:background="@drawable/borde_azul"
+                android:background="@drawable/borde_morado"
                 android:textColor="@color/black" />
 
             <Button
                 android:id="@+id/b48"
                 android:layout_width="43dp"
                 android:layout_height="45dp"
-                android:background="@drawable/borde_azul"
+                android:background="@drawable/borde_morado"
                 android:textColor="@color/black" />
 
             <Button
                 android:id="@+id/b49"
                 android:layout_width="43dp"
                 android:layout_height="45dp"
-                android:background="@drawable/borde_azul"
+                android:background="@drawable/borde_morado"
                 android:textColor="@color/black" />
 
             <Button
                 android:id="@+id/b50"
                 android:layout_width="43dp"
                 android:layout_height="45dp"
-                android:background="@drawable/borde_azul"
+                android:background="@drawable/borde_morado"
                 android:textColor="@color/black" />
 
             <Button
                 android:id="@+id/b51"
                 android:layout_width="43dp"
                 android:layout_height="45dp"
-                android:background="@drawable/borde_azul"
+                android:background="@drawable/borde_morado"
                 android:textColor="@color/black" />
 
             <Button
                 android:id="@+id/b52"
                 android:layout_width="43dp"
                 android:layout_height="45dp"
-                android:background="@drawable/borde_azul"
+                android:background="@drawable/borde_morado"
                 android:textColor="@color/black" />
 
             <Button
                 android:id="@+id/b53"
                 android:layout_width="43dp"
                 android:layout_height="45dp"
-                android:background="@drawable/borde_azul"
+                android:background="@drawable/borde_morado"
                 android:textColor="@color/black" />
 
             <Button
                 android:id="@+id/b54"
                 android:layout_width="43dp"
                 android:layout_height="45dp"
-                android:background="@drawable/borde_azul"
+                android:background="@drawable/borde_morado"
                 android:textColor="@color/black" />
 
         </GridLayout>
@@ -685,63 +700,63 @@
                 android:id="@+id/b64"
                 android:layout_width="43dp"
                 android:layout_height="45dp"
-                android:background="@drawable/borde_azul"
+                android:background="@drawable/borde_morado"
                 android:textColor="@color/black" />
 
             <Button
                 android:id="@+id/b65"
                 android:layout_width="43dp"
                 android:layout_height="45dp"
-                android:background="@drawable/borde_azul"
+                android:background="@drawable/borde_morado"
                 android:textColor="@color/black" />
 
             <Button
                 android:id="@+id/b66"
                 android:layout_width="43dp"
                 android:layout_height="45dp"
-                android:background="@drawable/borde_azul"
+                android:background="@drawable/borde_morado"
                 android:textColor="@color/black" />
 
             <Button
                 android:id="@+id/b67"
                 android:layout_width="43dp"
                 android:layout_height="45dp"
-                android:background="@drawable/borde_azul"
+                android:background="@drawable/borde_morado"
                 android:textColor="@color/black" />
 
             <Button
                 android:id="@+id/b68"
                 android:layout_width="43dp"
                 android:layout_height="45dp"
-                android:background="@drawable/borde_azul"
+                android:background="@drawable/borde_morado"
                 android:textColor="@color/black" />
 
             <Button
                 android:id="@+id/b69"
                 android:layout_width="43dp"
                 android:layout_height="45dp"
-                android:background="@drawable/borde_azul"
+                android:background="@drawable/borde_morado"
                 android:textColor="@color/black" />
 
             <Button
                 android:id="@+id/b70"
                 android:layout_width="43dp"
                 android:layout_height="45dp"
-                android:background="@drawable/borde_azul"
+                android:background="@drawable/borde_morado"
                 android:textColor="@color/black" />
 
             <Button
                 android:id="@+id/b71"
                 android:layout_width="43dp"
                 android:layout_height="45dp"
-                android:background="@drawable/borde_azul"
+                android:background="@drawable/borde_morado"
                 android:textColor="@color/black" />
 
             <Button
                 android:id="@+id/b72"
                 android:layout_width="43dp"
                 android:layout_height="45dp"
-                android:background="@drawable/borde_azul"
+                android:background="@drawable/borde_morado"
                 android:textColor="@color/black" />
 
         </GridLayout>
