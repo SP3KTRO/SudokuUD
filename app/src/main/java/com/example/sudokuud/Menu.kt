@@ -22,5 +22,9 @@ class Menu: ComponentActivity() {
             startActivity(intent)
         }
 
+        binding.buttonNivel3.setOnClickListener{
+            val intent = Intent(this, level3_Activity::class.java)
+            startActivity(intent)
+        }
     }
 }

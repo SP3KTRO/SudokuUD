@@ -13,9 +13,15 @@ class level1_Activity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.level1)
 
-        board = Board(this)
+        board = Board(this@level1_Activity)
         board.board()
 
         val nuevo: Button = findViewById(R.id.nuevo)
+        nuevo.setOnClickListener {
+            board.board()
+        }
+
+
+
     }
 }

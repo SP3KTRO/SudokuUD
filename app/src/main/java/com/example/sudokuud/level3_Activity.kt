@@ -9,26 +9,27 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.activity.ComponentActivity
 import com.example.sudokuud.viewmodel.Board
+import com.example.sudokuud.viewmodel.BoardLevelTree
 
 
-class level2_Activity : ComponentActivity() {
-    private lateinit var board: Board
+class level3_Activity : ComponentActivity() {
+    private lateinit var board: BoardLevelTree
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.level2)
+        setContentView(R.layout.level3)
 
-        board = Board(this)
+        board = BoardLevelTree(this)
         board.board()
 
         val nuevo: Button = findViewById(R.id.nuevo)
         nuevo.setOnClickListener {
             board.board()
         }
-        val timer= findViewById<TextView>(R.id.timer)
+        val timer= findViewById<TextView>(R.id.timer2)
         nuevo.setOnClickListener { board.board() }
 
-        val liveTimer = object : CountDownTimer(420000, 1000) {
+        val liveTimer = object : CountDownTimer(300000, 1000) {
             @SuppressLint("SetTextI18n")
             override fun onTick(millisUntilFinished: Long) {
                 // Actualizar el TextView cada segundo
@@ -37,12 +38,12 @@ class level2_Activity : ComponentActivity() {
 
             override fun onFinish() {
                 // Mostrar el AlertDialog cuando el tiempo llegue a 0
-                val builder = AlertDialog.Builder(this@level2_Activity)
+                val builder = AlertDialog.Builder(this@level3_Activity)
                 builder.setTitle("Tiempo agotado")
                 builder.setMessage("El juego ha terminado, serás redirigido al menú principal.")
                 builder.setPositiveButton("Aceptar") { _, _ ->
 
-                    val intent= Intent(this@level2_Activity,Menu::class.java)
+                    val intent= Intent(this@level3_Activity,Menu::class.java)
                     startActivity(intent)
 
                 }

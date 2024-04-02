@@ -1,18 +1,19 @@
 package com.example.sudokuud.viewmodel
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Context
+import android.graphics.Color
 import android.media.MediaPlayer
 import android.widget.Button
 import android.widget.Toast
 import androidx.core.content.ContextCompat
 import com.example.sudokuud.R
-import com.example.sudokuud.level1_Activity
 import kotlin.random.Random
 import kotlin.random.nextInt
 
 
-class Board(private val activity: Activity) {
+class BoardLevelTree(private val activity: Activity) {
     val context: Context = activity
     val soundsButtons = arrayOf(
 
@@ -24,6 +25,7 @@ class Board(private val activity: Activity) {
 
     )
     val soundFinish = MediaPlayer.create(context, R.raw.finish)
+    @SuppressLint("ResourceType")
     fun board() {
         val d = Random.nextInt(1..9)
         val e = Random.nextInt(1..9)
@@ -52,7 +54,6 @@ class Board(private val activity: Activity) {
         val ocho: Button = activity.findViewById(R.id.ocho);
         val nueve: Button = activity.findViewById(R.id.nueve)
         val borrar: Button = activity.findViewById(R.id.borrar);
-        val pista: Button = activity.findViewById(R.id.pista);
         val fin: Button = activity.findViewById(R.id.fin)
         val defaultButton: Button = activity.findViewById(R.id.defaultButton)
 
@@ -194,234 +195,7 @@ class Board(private val activity: Activity) {
                 );start = 0;buttonColorSize = buttonColor.size.toInt();trats = 0
                 }
                 borrar.setOnClickListener { buSelected.text = " " }
-                pista.setOnClickListener {
-                    trys++
-                    val abc = 5 - trys
-                    if (trys <= 5) {
-                        pista.text = "x$abc"
 
-                        when (buSelected) {
-                            //bloque 1
-                            botones[0] -> {
-                                botones[0].text = "$d"
-                            }; botones[1] -> {
-                            botones[1].text = "$f"
-                        }; botones[2] -> {
-                            botones[2].text = "$k"
-                        }; botones[3] -> {
-                            botones[3].text = "$e"
-                        }
-
-                            botones[4] -> {
-                                botones[4].text = "$n"
-                            }; botones[5] -> {
-                            botones[5].text = "$l"
-                        }; botones[6] -> {
-                            botones[6].text = "$m"
-                        };botones[7] -> {
-                            botones[7].text = "$i"
-                        }
-
-                            botones[8] -> {
-                                botones[8].text = "$j"
-                            }
-                            //bloque 2
-                            botones[9] -> {
-                                botones[9].text = "$i"
-                            }; botones[10] -> {
-                            botones[10].text = "$l"
-                        }; botones[11] -> {
-                            botones[11].text = "$m"
-                        }; botones[12] -> {
-                            botones[12].text = "$d"
-                        }
-
-                            botones[13] -> {
-                                botones[13].text = "$k"
-                            }; botones[14] -> {
-                            botones[14].text = "$j"
-                        }; botones[15] -> {
-                            botones[15].text = "$f"
-                        }; botones[16] -> {
-                            botones[16].text = "$n"
-                        }
-
-                            botones[17] -> {
-                                botones[17].text = "$e"
-                            }
-                            //bloque 3
-                            botones[18] -> {
-                                botones[18].text = "$j"
-                            }; botones[19] -> {
-                            botones[19].text = "$e"
-                        }; botones[20] -> {
-                            botones[20].text = "$n"
-                        }; botones[21] -> {
-                            botones[21].text = "$i"
-                        }
-
-                            botones[22] -> {
-                                botones[22].text = "$m"
-                            }; botones[23] -> {
-                            botones[23].text = "$f"
-                        }; botones[24] -> {
-                            botones[24].text = "$k"
-                        }; botones[25] -> {
-                            botones[25].text = "$d"
-                        }
-
-                            botones[26] -> {
-                                botones[26].text = "$l"
-                            }
-                            //bloque 4
-                            botones[27] -> {
-                                botones[27].text = "$k"
-                            }; botones[28] -> {
-                            botones[28].text = "$m"
-                        }; botones[29] -> {
-                            botones[29].text = "$f"
-                        }; botones[30] -> {
-                            botones[30].text = "$i"
-                        }
-
-                            botones[31] -> {
-                                botones[31].text = "$j"
-                            }; botones[32] -> {
-                            botones[32].text = "$n"
-                        }; botones[33] -> {
-                            botones[33].text = "$l"
-                        }; botones[34] -> {
-                            botones[34].text = "$e"
-                        }
-
-                            botones[35] -> {
-                                botones[35].text = "$d"
-                            }
-                            //bloque 5
-                            botones[36] -> {
-                                botones[36].text = "$l"
-                            }; botones[37] -> {
-                            botones[37].text = "$e"
-                        }; botones[38] -> {
-                            botones[38].text = "$n"
-                        }; botones[39] -> {
-                            botones[39].text = "$k"
-                        }
-
-                            botones[40] -> {
-                                botones[40].text = "$d"
-                            }; botones[41] -> {
-                            botones[41].text = "$f"
-                        }; botones[42] -> {
-                            botones[42].text = "$m"
-                        }; botones[43] -> {
-                            botones[43].text = "$j"
-                        }
-
-                            botones[44] -> {
-                                botones[44].text = "$i"
-                            };
-                            //bloque 6
-                            botones[45] -> {
-                                botones[45].text = "$d"
-                            }; botones[46] -> {
-                            botones[46].text = "$i"
-                        }; botones[47] -> {
-                            botones[47].text = "$j"
-                        }; botones[48] -> {
-                            botones[48].text = "$e"
-                        }
-
-                            botones[49] -> {
-                                botones[49].text = "$l"
-                            }; botones[50] -> {
-                            botones[50].text = "$m"
-                        }; botones[51] -> {
-                            botones[51].text = "$f"
-                        }; botones[52] -> {
-                            botones[52].text = "$n"
-                        }
-
-                            botones[53] -> {
-                                botones[53].text = "$k"
-                            }
-                            //bloque 7
-                            botones[54] -> {
-                                botones[54].text = "$j"
-                            }; botones[55] -> {
-                            botones[55].text = "$d"
-                        }; botones[56] -> {
-                            botones[56].text = "$i"
-                        }; botones[57] -> {
-                            botones[57].text = "$f"
-                        }
-
-                            botones[58] -> {
-                                botones[58].text = "$l"
-                            }; botones[59] -> {
-                            botones[59].text = "$m"
-                        }; botones[60] -> {
-                            botones[60].text = "$n"
-                        }; botones[61] -> {
-                            botones[61].text = "$k"
-                        }
-
-                            botones[62] -> {
-                                botones[62].text = "$e"
-                            }
-                            //bloque 8
-                            botones[63] -> {
-                                botones[63].text = "$n"
-                            }; botones[64] -> {
-                            botones[64].text = "$f"
-                        }; botones[65] -> {
-                            botones[65].text = "$l"
-                        }; botones[66] -> {
-                            botones[66].text = "$e"
-                        }
-
-                            botones[67] -> {
-                                botones[67].text = "$i"
-                            }; botones[68] -> {
-                            botones[68].text = "$k"
-                        }; botones[69] -> {
-                            botones[69].text = "$j"
-                        }; botones[70] -> {
-                            botones[70].text = "$m"
-                        }
-
-                            botones[71] -> {
-                                botones[71].text = "$d"
-                            }
-                            //bloque 9
-                            botones[72] -> {
-                                botones[72].text = "$m"
-                            }; botones[73] -> {
-                            botones[73].text = "$k"
-                        }; botones[74] -> {
-                            botones[74].text = "$e"
-                        }; botones[75] -> {
-                            botones[75].text = "$n"
-                        }
-
-                            botones[76] -> {
-                                botones[76].text = "$j"
-                            }; botones[77] -> {
-                            botones[77].text = "$d"
-                        }; botones[78] -> {
-                            botones[78].text = "$l"
-                        }; botones[79] -> {
-                            botones[79].text = "$f"
-                        }
-
-                            botones[80] -> {
-                                botones[80].text = "$i"
-                            }
-                        }
-                    } else {
-                        Toast.makeText(activity, "No tienes mas ayudas", Toast.LENGTH_SHORT).show()
-                    }
-                }
 
             }
         }
@@ -712,8 +486,10 @@ class Board(private val activity: Activity) {
             if (i != j && i != k && k != j && d != i && d != j && d != k && e != i && e != j && e != k && f != i && f != j && f != k) {
                 if (l != m && l != n && n != m && d != l && d != m && d != n && e != l && e != m && e != n && f != l && f != m && f != n && i != l && i != m && i != n && j != l && j != m && j != n && k != l && k != m && k != n) {
                     //bloque 1
+                    val color = setBackgroudResourse(d)
                     botones[0].text =
-                        "$d";botones[0].setBackgroundResource(R.drawable.borde_negro);botones[0].setOnClickListener {
+                        "$d";botones[0].setBackgroundResource(R.drawable.borde_azul);botones[0].setOnClickListener {
+
                         botones[0].text = "$d";
                     }
                     botones[1].text =

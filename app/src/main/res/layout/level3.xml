@@ -6,6 +6,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/fondo_level3">
 
+    <TextView
+        android:id="@+id/timer2"
+        android:layout_width="102dp"
+        android:layout_height="59dp"
+        android:layout_margin="30dp"
+        android:text="TextView"
+        android:textColor="#FFFFFF"
+        android:textSize="26sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="19dp"
+        tools:layout_editor_absoluteY="16dp" />
+
     <GridLayout
         android:id="@+id/top"
         android:layout_width="144dp"
@@ -75,12 +87,12 @@
             android:background="@drawable/custom_button"/>
 
         <Button
-            android:id="@+id/pista"
+            android:id="@+id/nopista"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="0"
             android:layout_column="3"
-            android:text="💡"
+            android:text="No help"
             tools:ignore="HardcodedText"
             android:background="@drawable/custom_button"/>
 
