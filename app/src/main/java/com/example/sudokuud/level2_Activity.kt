@@ -3,6 +3,7 @@ package com.example.sudokuud
 import android.annotation.SuppressLint
 import android.app.AlertDialog
 import android.content.Intent
+import android.media.MediaPlayer
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.widget.Button
@@ -13,6 +14,7 @@ import com.example.sudokuud.viewmodel.Board
 
 class level2_Activity : ComponentActivity() {
     private lateinit var board: Board
+    private lateinit var mediaPlayer: MediaPlayer
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,10 +22,12 @@ class level2_Activity : ComponentActivity() {
 
         board = Board(this)
         board.board()
+        mediaPlayer = MediaPlayer.create(this, R.raw.sound_level2)
 
         val nuevo: Button = findViewById(R.id.nuevo)
         nuevo.setOnClickListener {
             board.board()
+            mediaPlayer.start()
         }
         val timer= findViewById<TextView>(R.id.timer)
         nuevo.setOnClickListener { board.board() }
@@ -48,10 +52,22 @@ class level2_Activity : ComponentActivity() {
                 }
                 builder.show()
             }
-
-
         }
         liveTimer.start()
+    }
+    override fun onPause() {
+        super.onPause()
+        mediaPlayer.pause()
+    }
 
+    override fun onResume() {
+        super.onResume()
+        mediaPlayer.start()
+    }
+
+    override fun onStop() {
+        super.onStop()
+        mediaPlayer.stop()
+        mediaPlayer.release()
     }
 }

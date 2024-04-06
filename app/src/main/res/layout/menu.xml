@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingTop="140dp"
-    android:background="@drawable/fondo_menu">
+    android:background="@drawable/menu_background">
 
     <GridLayout
         android:id="@+id/Buttons"
@@ -15,7 +15,7 @@
         android:layout_below="@+id/title"
 
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="110dp"
+        android:layout_marginTop="180dp"
         android:columnCount="3"
         android:rowCount="3"
         tools:ignore="MissingConstraints">
@@ -59,7 +59,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="°°° Kirby's °°° Sudoku Paradise "
+        android:text=""
         android:textColor="#FFFFFF"
         android:textSize="48sp"
         android:textStyle="bold|italic"
